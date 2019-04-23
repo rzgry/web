@@ -3,7 +3,23 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-const useBioData = () => {
+const BioWrapper = styled.div`
+  @media (min-width: 500px) {
+    display: flex;
+  }
+`;
+
+const BioImgWrapper = styled.div`
+  flex: 0;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+`;
+
+const BioTextWrapper = styled.div`
+  flex: 1;
+`;
+
+const Bio = () => {
   const data = useStaticQuery(
     graphql`
       query BioQuery {
@@ -22,27 +38,7 @@ const useBioData = () => {
       }
     `,
   );
-  return data;
-};
 
-const BioWrapper = styled.div`
-  @media (min-width: 500px) {
-    display: flex;
-  }
-`;
-
-const BioImgWrapper = styled.div`
-  flex: 0;
-  margin-right: 1rem;
-  margin-bottom: 0.5rem;
-`;
-
-const BioTextWrapper = styled.div`
-  flex: 1;
-`;
-
-const Bio = () => {
-  const data = useBioData();
   return (
     <BioWrapper>
       <BioImgWrapper>

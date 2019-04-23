@@ -9,22 +9,16 @@ const SocialListItem = styled.li`
   }
 `;
 
-const Social = () => (
+const SocialList = ({ links }) => (
   <ul>
-    <SocialListItem>
-      <a href="https://www.linkedin.com/in/ryan-zegray/" target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
-    </SocialListItem>
-    <SocialListItem>
-      <a href="https://github.com/rzgry" target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>
-    </SocialListItem>
-    <SocialListItem>
-      <a href="mailto:ryan.zegray@gmail.com">Email</a>
-    </SocialListItem>
+    {links.map(({ href, text, ...rest }) => (
+      <SocialListItem key={href}>
+        <a href={href} {...rest}>
+          {text}
+        </a>
+      </SocialListItem>
+    ))}
   </ul>
 );
 
-export default Social;
+export default SocialList;

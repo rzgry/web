@@ -1,30 +1,22 @@
 import Typography from 'typography';
 import Sutro from 'typography-theme-sutro';
-
-// https://coolors.co/3b3f47-8aa399-f2f2f2-7d84b2-7688a7
-const customTheme = {
-  background: '#F2F2F2',
-  primaryText: '#8297B9',
-  secondaryText: '#3B3F47',
-  link: '#7688A7',
-  linkHover: '#B4C3DC',
-};
+import theme from './theme';
 
 Sutro.overrideThemeStyles = () => ({
   body: {
-    backgroundColor: customTheme.background,
+    backgroundColor: theme.background,
   },
   p: {
-    color: customTheme.secondaryText,
+    color: theme.secondaryText,
   },
   'h1,h2,h4,h5,h6': {
-    color: customTheme.primaryText,
+    color: theme.primaryText,
   },
   a: {
-    color: customTheme.link,
+    color: theme.link,
   },
   'a:hover': {
-    color: customTheme.linkHover,
+    color: theme.linkHover,
   },
 });
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+
+import Footer from './footer';
+import theme from '../utils/theme';
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -15,74 +18,20 @@ const Main = styled.main`
 
 const MainContainer = styled.div`
   margin: 0 auto;
-  max-width: 900px;
+  max-width: ${props => props.theme.maxContentWidth};
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `;
 
-const Footer = styled.footer`
-  text-align: right;
-  background: #8aa399;
-  position: relative;
-  :before {
-    content: '';
-    position: absolute;
-    top: -3rem;
-    height: 3rem;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom right, transparent 49%, #8aa399 50%);
-  }
-`;
-
-const FooterText = styled.p`
-  color: #f2f2f2;
-  a {
-    color: #3b3f47;
-  }
-  a:hover {
-    color: #b4c3dc;
-  }
-  margin-top: 0.5rem;
-`;
-
-const FooterContainer = styled.div`
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 0px 1.0875rem 0px;
-`;
-
 const Layout = ({ children }) => (
-  <LayoutWrapper>
-    <Main>
-      <MainContainer>{children}</MainContainer>
-    </Main>
-    <Footer>
-      <FooterContainer>
-        <FooterText>
-          &copy;
-          {' '}
-          {new Date().getFullYear()}
-          {', '}
-          <span style={{ whiteSpace: 'nowrap' }}>
-            Built with
-            {' '}
-            <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
-              GatsbyJS
-            </a>
-          </span>
-          {' '}
-          <span style={{ whiteSpace: 'nowrap' }}>
-            and
-            {' '}
-            <a href="https://www.styled-components.com/" target="_blank" rel="noopener noreferrer">
-              Styled Components
-            </a>
-          </span>
-        </FooterText>
-      </FooterContainer>
-    </Footer>
-  </LayoutWrapper>
+  <ThemeProvider theme={theme}>
+    <LayoutWrapper>
+      <Main>
+        <MainContainer>{children}</MainContainer>
+      </Main>
+      <Footer />
+    </LayoutWrapper>
+  </ThemeProvider>
 );
 
 Layout.propTypes = {

@@ -4,7 +4,26 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
-import Social from '../components/social';
+import SocialList from '../components/social';
+
+const socialLinks = [
+  {
+    text: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ryan-zegray/',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    text: 'GitHub',
+    href: 'https://github.com/rzgry',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    text: 'Email',
+    href: 'mailto:ryan.zegray@gmail.com',
+  },
+];
 
 const Title = styled.h1`
   @media (min-width: 500px) {
@@ -22,7 +41,7 @@ const IndexPage = () => (
     />
     <Title>Ryan Zegray</Title>
     <Bio />
-    <Social />
+    <SocialList links={socialLinks} />
   </Layout>
 );
 
