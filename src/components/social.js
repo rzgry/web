@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const SocialListItem = styled.li`
   display: inline;
@@ -20,5 +21,14 @@ const SocialList = ({ links }) => (
     ))}
   </ul>
 );
+
+SocialList.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 
 export default SocialList;
