@@ -1,3 +1,5 @@
+const googleTrackingId = process.env.google_analytics_tracking_id;
+
 module.exports = {
   siteMetadata: {
     title: 'Ryan Zegray',
@@ -16,13 +18,19 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: googleTrackingId,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Ryan Zegray',
+        short_name: 'Ryan Zegray',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#F2F2F2',
+        theme_color: '#F2F2F2',
         display: 'minimal-ui',
         icon: 'src/images/icon.png',
       },
