@@ -31,13 +31,13 @@ const BioWrapper = styled.div`
   }
 `;
 
-const BioImgContainer = styled.div`
+const BioImgWrapper = styled.div`
   flex: 0;
   margin-right: 1rem;
   margin-bottom: 0.5rem;
 `;
 
-const BioDescription = styled.div`
+const BioTextWrapper = styled.div`
   flex: 1;
 `;
 
@@ -45,7 +45,7 @@ const Bio = () => {
   const data = useBioData();
   return (
     <BioWrapper>
-      <BioImgContainer>
+      <BioImgWrapper>
         <Image
           fixed={data.img.childImageSharp.fixed}
           alt={data.site.siteMetadata.author}
@@ -53,8 +53,8 @@ const Bio = () => {
             borderRadius: '50%',
           }}
         />
-      </BioImgContainer>
-      <BioDescription>
+      </BioImgWrapper>
+      <BioTextWrapper>
         <p>
           <span>Hi I&#39;m Ryan. I am a Software Developer at IBM working on </span>
           <a
@@ -80,7 +80,7 @@ const Bio = () => {
           </a>
           .
         </p>
-      </BioDescription>
+      </BioTextWrapper>
     </BioWrapper>
   );
 };

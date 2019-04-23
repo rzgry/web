@@ -2,6 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const LayoutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
 const Main = styled.main`
   flex: 1;
   margin-bottom: 2rem;
@@ -46,12 +52,6 @@ const FooterContainer = styled.div`
   padding: 0px 1.0875rem 0px;
 `;
 
-const LayoutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
-
 const Layout = ({ children }) => (
   <LayoutWrapper>
     <Main>
@@ -63,8 +63,7 @@ const Layout = ({ children }) => (
           &copy;
           {' '}
           {new Date().getFullYear()}
-,
-          {' '}
+          {', '}
           <span style={{ whiteSpace: 'nowrap' }}>
             Built with
             {' '}

@@ -10,27 +10,21 @@ const SocialListItem = styled.li`
 `;
 
 const Social = () => (
-  <div>
-    <ul>
-      <SocialListItem>
-        <a href="https://github.com/rzgry" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </SocialListItem>
-      <SocialListItem>
-        <a
-          href="https://www.linkedin.com/in/ryan-zegray/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-      </SocialListItem>
-      <SocialListItem>
-        <a href="mailto:ryan.zegray@gmail.com">Email</a>
-      </SocialListItem>
-    </ul>
-  </div>
+  <ul>
+    <SocialListItem>
+      <a href="https://www.linkedin.com/in/ryan-zegray/" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </SocialListItem>
+    <SocialListItem>
+      <a href="https://github.com/rzgry" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </SocialListItem>
+    <SocialListItem>
+      <a href="mailto:ryan.zegray@gmail.com">Email</a>
+    </SocialListItem>
+  </ul>
 );
 
 export default Social;
