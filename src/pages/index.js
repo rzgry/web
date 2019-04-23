@@ -16,7 +16,10 @@ const Title = styled.h1`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
+    <SEO
+      title="Home"
+      keywords={['ryan', 'zegray', 'ryan zegray', 'software developer', 'node', 'react']}
+    />
     <Title>Ryan Zegray</Title>
     <Bio />
     <Social />
