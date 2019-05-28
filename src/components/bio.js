@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
+import resume from '../images/resume.pdf';
+
 const BioWrapper = styled.div`
   @media (min-width: 500px) {
     display: flex;
@@ -68,7 +70,9 @@ const Bio = () => {
         </p>
         <p>
           <span>You can find my resume </span>
-          <a href="#">here</a>
+          <a href={resume} target="_blank" rel="noopener noreferrer">
+            here
+          </a>
           <span> and some of my past projects are avaliable </span>
           {' '}
           <a href="https://github.com/rzgry" target="_blank" rel="noopener noreferrer">
