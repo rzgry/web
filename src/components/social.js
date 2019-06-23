@@ -3,10 +3,8 @@ import styled from 'styled-components';
 
 const socialLinks = [
   {
-    text: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ryan-zegray/',
-    target: '_blank',
-    rel: 'noopener noreferrer',
+    text: 'Email',
+    href: 'mailto:ryan.zegray@gmail.com',
   },
   {
     text: 'GitHub',
@@ -15,8 +13,10 @@ const socialLinks = [
     rel: 'noopener noreferrer',
   },
   {
-    text: 'Email',
-    href: 'mailto:ryan.zegray@gmail.com',
+    text: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ryan-zegray/',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
 ];
 

@@ -54,7 +54,8 @@ const Bio = () => {
       </BioImgWrapper>
       <BioTextWrapper>
         <p>
-          <span>Hi I&#39;m Ryan. I am a Software Developer at IBM working on </span>
+          Hi I&#39;m Ryan. I am a Software Developer at IBM working on
+          {' '}
           <a
             href="https://cloud.ibm.com/catalog/services/voice-agent-with-watson"
             target="_blank"
@@ -62,18 +63,18 @@ const Bio = () => {
           >
             Voice Agent with Watson
           </a>
-          <span>
-            {' '}
-            for IBM Cloud. I majored in Computer Science at Western University where I graduated
-            from in April of 2019.
-          </span>
+          {' '}
+          for IBM Cloud. I majored in Computer Science at Western University where I graduated from
+          in April of 2019.
         </p>
         <p>
-          <span>You can find my resume </span>
+          You can find my resume
+          {' '}
           <a href={resume} target="_blank" rel="noopener noreferrer">
             here
           </a>
-          <span> and some of my past projects are avaliable </span>
+          {' '}
+          and some of my past projects are avaliable
           {' '}
           <a href="https://github.com/rzgry" target="_blank" rel="noopener noreferrer">
             here
