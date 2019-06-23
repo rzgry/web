@@ -11,7 +11,7 @@ const FlexLayout = styled.div`
   min-height: 100vh;
 `;
 
-const MainContainer = styled.main`
+const Main = styled.main`
   flex: 1;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -22,7 +22,7 @@ const MainContainer = styled.main`
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <FlexLayout>
-      <MainContainer>{children}</MainContainer>
+      <Main>{children}</Main>
       <Footer />
     </FlexLayout>
   </ThemeProvider>

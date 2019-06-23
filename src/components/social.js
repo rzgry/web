@@ -28,7 +28,7 @@ const SocialListItem = styled.li`
   }
 `;
 
-const SocialList = () => (
+const Social = () => (
   <ul>
     {socialLinks.map(({ href, text, ...rest }) => (
       <SocialListItem key={href}>
@@ -40,4 +40,4 @@ const SocialList = () => (
   </ul>
 );
 
-export default SocialList;
+export default Social;

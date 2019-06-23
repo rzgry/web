@@ -10,7 +10,16 @@ const IndexPage = () => (
   <Layout>
     <SEO
       title="Ryan Zegray"
-      keywords={['ryan', 'zegray', 'ryan zegray', 'software developer', 'node', 'react']}
+      keywords={[
+        'ryan',
+        'zegray',
+        'ryan zegray',
+        'software developer',
+        'cloud software developer',
+        'javascript',
+        'node',
+        'react',
+      ]}
     />
     <Title>Ryan Zegray</Title>
     <Bio />
