@@ -19,6 +19,9 @@ Noriega.overrideThemeStyles = () => ({
   'a:hover': {
     color: theme.linkHover,
   },
+  ul: {
+    marginLeft: 0,
+  },
 });
 
 const typography = new Typography(Noriega);

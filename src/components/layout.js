@@ -16,7 +16,7 @@ const Main = styled.main`
   margin: 0 auto;
   margin-bottom: 2rem;
   max-width: ${props => props.theme.maxContentWidth};
-  padding: 0px 1.0875rem 1.45rem;
+  padding: 1.5rem 1.0875rem 1.45rem;
 `;
 
 const Layout = ({ children }) => (
