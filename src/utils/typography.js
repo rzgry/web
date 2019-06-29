@@ -1,8 +1,8 @@
 import Typography from 'typography';
-import Sutro from 'typography-theme-sutro';
+import Noriega from 'typography-theme-noriega';
 import theme from './theme';
 
-Sutro.overrideThemeStyles = () => ({
+Noriega.overrideThemeStyles = () => ({
   body: {
     backgroundColor: theme.background,
   },
@@ -14,13 +14,14 @@ Sutro.overrideThemeStyles = () => ({
   },
   a: {
     color: theme.link,
+    textDecoration: 'none',
   },
   'a:hover': {
     color: theme.linkHover,
   },
 });
 
-const typography = new Typography(Sutro);
+const typography = new Typography(Noriega);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
