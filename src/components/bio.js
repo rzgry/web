@@ -54,7 +54,12 @@ const Bio = () => {
       </BioImgWrapper>
       <BioTextWrapper>
         <p>
-          Hi I&#39;m Ryan. I am a Software Developer at IBM working on
+          Hi I&#39;m Ryan
+          {' '}
+          <span role="img" aria-label="Wave emoji">
+            👋
+          </span>
+          . I am a Software Developer at IBM currently working on
           {' '}
           <a
             href="https://cloud.ibm.com/catalog/services/voice-agent-with-watson"
@@ -64,8 +69,8 @@ const Bio = () => {
             Voice Agent with Watson
           </a>
           {' '}
-          for IBM Cloud. I majored in Computer Science at Western University where I graduated from
-          in April of 2019.
+          for IBM Cloud. I graduated in April of 2019 with a degree in computer science from Western
+          University.
         </p>
         <p>
           You can find my resume
