@@ -15,9 +15,12 @@ Noriega.overrideThemeStyles = () => ({
   a: {
     color: theme.link,
     textDecoration: 'none',
+    boxShadow: `inset 0 -2px 0 0 ${theme.link}`,
+    transition: 'box-shadow .20s',
   },
   'a:hover': {
-    color: theme.linkHover,
+    color: theme.background,
+    boxShadow: `inset 0 -50px 0 0 ${theme.link}`,
   },
   ul: {
     marginLeft: 0,

@@ -29,6 +29,7 @@ const FooterContainer = styled.div`
 const FooterText = styled.p`
   color: ${props => props.theme.background};
   a {
+    box-shadow: none;
     color: ${props => props.theme.secondaryText};
   }
   a:hover {
@@ -41,22 +42,25 @@ const Footer = () => (
   <StyledFooter>
     <FooterContainer>
       <FooterText>
-        &copy;
-        {' '}
-        {new Date().getFullYear()}
+        &copy; {new Date().getFullYear()}
         {', '}
         <span style={{ whiteSpace: 'nowrap' }}>
-          Built with
-          {' '}
-          <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
+          Built with{' '}
+          <a
+            href="https://www.gatsbyjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GatsbyJS
           </a>
-        </span>
-        {' '}
+        </span>{' '}
         <span style={{ whiteSpace: 'nowrap' }}>
-          and
-          {' '}
-          <a href="https://www.styled-components.com/" target="_blank" rel="noopener noreferrer">
+          and{' '}
+          <a
+            href="https://www.styled-components.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Styled Components
           </a>
         </span>
