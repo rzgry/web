@@ -38,7 +38,7 @@ const Bio = () => {
           }
         }
       }
-    `,
+    `
   );
 
   return (
@@ -54,34 +54,32 @@ const Bio = () => {
       </BioImgWrapper>
       <BioTextWrapper>
         <p>
-          Hi I&#39;m Ryan
-          {' '}
+          Hi I&#39;m Ryan{' '}
           <span role="img" aria-label="Wave emoji">
             👋
           </span>
-          . I am a Software Developer at IBM currently working on
-          {' '}
+          . I am a Software Developer at IBM currently working on{' '}
           <a
             href="https://cloud.ibm.com/catalog/services/voice-agent-with-watson"
             target="_blank"
             rel="noopener noreferrer"
           >
             Voice Agent with Watson
-          </a>
-          {' '}
-          for IBM Cloud. I graduated in April of 2019 with a degree in computer science from Western
-          University.
+          </a>{' '}
+          for IBM Cloud. I graduated in April of 2019 with a degree in computer
+          science from Western University.
         </p>
         <p>
-          You can find my resume
-          {' '}
+          You can find my resume{' '}
           <a href={resume} target="_blank" rel="noopener noreferrer">
             here
-          </a>
-          {' '}
-          and some of my past projects are avaliable
-          {' '}
-          <a href="https://github.com/rzgry" target="_blank" rel="noopener noreferrer">
+          </a>{' '}
+          and some of my past projects are avaliable{' '}
+          <a
+            href="https://github.com/rzgry"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             here
           </a>
           .

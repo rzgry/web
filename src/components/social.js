@@ -32,6 +32,7 @@ const Social = () => (
   <ul>
     {socialLinks.map(({ href, text, ...rest }) => (
       <SocialListItem key={href}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <a href={href} {...rest}>
           {text}
         </a>
