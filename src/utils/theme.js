@@ -1,20 +1,9 @@
-const DARK_YELLOW = 'rgb(255, 195, 13)';
-const LIGHT_YELLOW = 'rgb(255, 210, 78)';
-const OFF_WHITE = '#f0f0f0';
-const DARK_GRAY = 'rgb(41, 47, 53)';
-
-const theme = {
-  maxContentWidth: '900px',
-  background: DARK_GRAY,
-  primaryText: DARK_YELLOW,
-  secondaryText: OFF_WHITE,
-  link: LIGHT_YELLOW,
-  footerBackground: OFF_WHITE,
-  buttonColor: LIGHT_YELLOW,
-  buttonHover: DARK_YELLOW,
-  buttonActive: DARK_YELLOW,
-  lightText: OFF_WHITE,
-  darkText: DARK_GRAY,
+export default {
+  primaryDark: 'rgb(34, 37, 39)',
+  secondaryDark: 'rgb(81, 81, 81)',
+  primaryLight: 'rgb(252, 252, 252)',
+  secondaryLight: 'rgb(245, 245, 245)',
+  highlight: '#0DAB76',
+  headerBackground: 'rgb(252, 252, 252, 0.9)',
+  maxContentWidth: '1100px',
 };
-
-export default theme;

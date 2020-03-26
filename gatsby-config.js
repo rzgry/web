@@ -26,6 +26,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Raleway:300,400,600,700,800`],
+        display: 'swap',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Ryan Zegray',
@@ -38,12 +45,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
   ],

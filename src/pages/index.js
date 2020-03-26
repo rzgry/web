@@ -2,9 +2,9 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Title from '../components/title';
-import Bio from '../components/bio';
-import Social from '../components/social';
+import About from '../components/about';
+import Skills from '../components/skills';
+import Projects from '../components/projects';
 
 const IndexPage = () => (
   <Layout>
@@ -21,9 +21,9 @@ const IndexPage = () => (
         'react',
       ]}
     />
-    <Title>Ryan Zegray</Title>
-    <Bio />
-    <Social />
+    <About />
+    <Skills />
+    <Projects />
   </Layout>
 );
 

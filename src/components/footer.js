@@ -1,59 +1,59 @@
 import React from 'react';
-import styled from 'styled-components';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import styled from 'styled-components';
+import { socialLinks } from './social';
 
-const StyledFooter = styled.footer`
-  text-align: right;
-  background: ${props => props.theme.footerBackground};
-  position: relative;
-  :before {
-    content: '';
-    position: absolute;
-    top: -3rem;
-    height: 3rem;
-    left: 0;
-    right: 0;
-    background: linear-gradient(
-      to bottom right,
-      transparent 49%,
-      ${props => props.theme.footerBackground} 50%
-    );
+// no need for codesandbox in contact links
+const contactLinks = socialLinks.filter(link => link.text !== 'CodeSandbox');
+
+const Footer = styled.footer`
+  margin-top: 5em;
+  width: 100%;
+  padding-top: 2em;
+  p {
+    text-align: center;
+  }
+  div {
+    margin: auto;
+    flex-direction: row-reverse;
+    max-width: ${({ theme }) => theme.maxContentWidth};
+    padding: 1em;
   }
 `;
 
-const FooterContainer = styled.div`
-  margin: 0 auto;
-  max-width: ${props => props.theme.maxContentWidth};
-  padding: 0px 1.0875rem 0px;
-`;
-
-const FooterText = styled.p`
-  color: ${props => props.theme.background};
-  a {
-    box-shadow: inset 0 -2px 0 0 ${props => props.theme.primaryText};
-    color: ${props => props.theme.background};
-  }
-  a:hover {
-    box-shadow: inset 0 -50px 0 0 ${props => props.theme.primaryText};
-    color: ${props => props.theme.background};
-  }
-  margin-top: 0.5rem;
-`;
-
-const Footer = () => (
-  <StyledFooter>
-    <FooterContainer>
-      <FooterText>
+export default () => (
+  <Footer>
+    <div>
+      <p>
+        Get in touch:{' '}
+        {contactLinks.map(({ href, text, ...rest }) => (
+          <>
+            {/* eslint-disable-next-line react/jsx-props-no-spreading  */}
+            <a href={href} {...rest}>
+              {text}
+            </a>{' '}
+          </>
+        ))}
+      </p>
+      <p>
         &copy; {new Date().getFullYear()}
         {', '}
         <span style={{ whiteSpace: 'nowrap' }}>
           Built with{' '}
           <OutboundLink
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
+          </OutboundLink>
+          ,{' '}
+          <OutboundLink
             href="https://www.gatsbyjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GatsbyJS
+            Gatsby
           </OutboundLink>
         </span>{' '}
         <span style={{ whiteSpace: 'nowrap' }}>
@@ -65,10 +65,9 @@ const Footer = () => (
           >
             Styled Components
           </OutboundLink>
+          .
         </span>
-      </FooterText>
-    </FooterContainer>
-  </StyledFooter>
+      </p>
+    </div>
+  </Footer>
 );
-
-export default Footer;

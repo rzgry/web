@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import styled from 'styled-components';
 
-const socialLinks = [
+export const socialLinks = [
   {
     text: 'Email',
     href: 'mailto:ryan.zegray@gmail.com',
@@ -27,25 +27,32 @@ const socialLinks = [
   },
 ];
 
-const SocialListItem = styled.li`
-  display: inline-block;
-  margin-right: 1rem;
-  :last-child {
-    margin-right: 0;
+const StyledSocial = styled.p`
+  display: flex;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    padding-left: 1em;
   }
 `;
 
 const Social = () => (
-  <ul>
-    {socialLinks.map(({ href, text, ...rest }) => (
-      <SocialListItem key={href}>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <OutboundLink href={href} {...rest}>
-          {text}
-        </OutboundLink>
-      </SocialListItem>
-    ))}
-  </ul>
+  <StyledSocial>
+    &gt;
+    <ul>
+      {socialLinks.map(({ href, text, ...rest }) => (
+        <li key={href}>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <OutboundLink href={href} {...rest}>
+            {text}
+          </OutboundLink>
+        </li>
+      ))}
+    </ul>
+  </StyledSocial>
 );
 
 export default Social;
