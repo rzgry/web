@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Location } from '@reach/router';
 import ScrollToAnchorLink from './utility/scroll-to-anchor-link';
 
 const StyledHeader = styled.header`
@@ -49,27 +50,39 @@ const HeaderOffset = styled.div`
 
 export default () => {
   return (
-    <>
-      <StyledHeader>
-        <nav>
-          <a className="header-title" href="/">
-            RZ
-          </a>
-          <ul>
-            <li>
-              <ScrollToAnchorLink targetElementId="about" text="About" />
-            </li>
-            <li>
-              <ScrollToAnchorLink targetElementId="skills" text="Skills" />
-            </li>
-            <li>
-              <ScrollToAnchorLink targetElementId="projects" text="Projects" />
-            </li>
-          </ul>
-        </nav>
-      </StyledHeader>
-      {/* Offset for 'position: fixed' header */}
-      <HeaderOffset />
-    </>
+    <Location>
+      {({ location }) => (
+        <>
+          <StyledHeader>
+            <nav>
+              <a className="header-title" href="/">
+                RZ
+              </a>
+              {location.pathname === '/' && (
+                <ul>
+                  <li>
+                    <ScrollToAnchorLink targetElementId="about" text="About" />
+                  </li>
+                  <li>
+                    <ScrollToAnchorLink
+                      targetElementId="skills"
+                      text="Skills"
+                    />
+                  </li>
+                  <li>
+                    <ScrollToAnchorLink
+                      targetElementId="projects"
+                      text="Projects"
+                    />
+                  </li>
+                </ul>
+              )}
+            </nav>
+          </StyledHeader>
+          {/* Offset for 'position: fixed' header */}
+          <HeaderOffset />
+        </>
+      )}
+    </Location>
   );
 };
