@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 export const Col = styled.div`
   margin-bottom: 1em;
-
-  /* temp: just for visibility when debugging */
-  /* background: red; */
 `;
 
 export const Row = styled.div`

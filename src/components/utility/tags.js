@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types'
 
 const TagWrapper = styled.ul`
   display: flex;
@@ -24,5 +25,9 @@ const Tags = ({ tags }) => (
     ))}
   </TagWrapper>
 );
+
+Tags.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
 
 export default Tags;

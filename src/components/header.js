@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.headerBackground};
   z-index: 100;
+
   ul {
     display: flex;
     li:not(:first-child) {
@@ -26,15 +27,14 @@ const StyledHeader = styled.header`
     align-items: center;
   }
 
-  .header-title {
+  .header-logo {
     font-size: 2em;
-    /* No box shadow for main title/logo */
     color: ${({ theme }) => theme.highlight};
     box-shadow: none;
   }
 
   @media screen and (max-width: 700px) {
-    .header-title {
+    .header-logo {
       display: none;
     }
 
@@ -55,7 +55,7 @@ export default () => {
         <>
           <StyledHeader>
             <nav>
-              <a className="header-title" href="/">
+              <a className="header-logo" href="/">
                 RZ
               </a>
               {location.pathname === '/' && (

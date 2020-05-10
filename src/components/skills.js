@@ -5,7 +5,7 @@ import { Row, Col } from './utility/flex-grid';
 import { Margin } from './utility/spacing';
 import Section from './utility/section';
 
-const SkillsBackground = styled.div`
+const SkillsContainer = styled.div`
   margin-top: 4em;
   margin-bottom: 4em;
   width: 100%;
@@ -61,7 +61,7 @@ const StyledSkills = styled(Section)`
   }
 `;
 
-const Skill = ({ title, skills }) => (
+const SkillSet = ({ title, skills }) => (
   <>
     <h5>{title}</h5>
     <ul>
@@ -72,19 +72,19 @@ const Skill = ({ title, skills }) => (
   </>
 );
 
-Skill.propTypes = {
+SkillSet.propTypes = {
   title: PropTypes.string.isRequired,
   skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default () => (
-  <SkillsBackground>
+  <SkillsContainer>
     <StyledSkills id="skills">
       <h2>Skills</h2>
       <Margin top="1.5em">
         <Row cols={3} mobileBreakpoint="750px">
           <Col>
-            <Skill
+            <SkillSet
               title="Frontend"
               skills={[
                 'JavaScript (ES6+)',
@@ -98,7 +98,7 @@ export default () => (
             />
           </Col>
           <Col>
-            <Skill
+            <SkillSet
               title="Backend"
               skills={[
                 'Node.js',
@@ -111,7 +111,7 @@ export default () => (
             />
           </Col>
           <Col>
-            <Skill
+            <SkillSet
               title="Miscellaneous"
               skills={[
                 'Git',
@@ -125,5 +125,5 @@ export default () => (
         </Row>
       </Margin>
     </StyledSkills>
-  </SkillsBackground>
+  </SkillsContainer>
 );

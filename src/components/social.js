@@ -29,12 +29,8 @@ export const socialLinks = [
 
 const StyledSocial = styled.p`
   display: flex;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   li {
+    display: inline-block;
     padding-left: 1em;
   }
 `;

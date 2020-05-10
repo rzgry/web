@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'
 
 const ScrollToAnchorLink = ({ targetElementId, text }) => {
   const [anchorTarget, setAnchorTarget] = useState(null);
@@ -26,5 +27,10 @@ const ScrollToAnchorLink = ({ targetElementId, text }) => {
     </li>
   );
 };
+
+ScrollToAnchorLink.propTypes = {
+  targetElementId: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+}
 
 export default ScrollToAnchorLink;
