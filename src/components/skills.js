@@ -88,6 +88,7 @@ export default () => (
               title="Frontend"
               skills={[
                 'JavaScript (ES6+)',
+                'TypeScript',
                 'React.js',
                 'HTML',
                 'CSS',
@@ -112,7 +113,13 @@ export default () => (
           <Col>
             <Skill
               title="Miscellaneous"
-              skills={['Git', 'Docker', 'Cloud computing', 'Agile development']}
+              skills={[
+                'Git',
+                'Docker',
+                'Kubernetes',
+                'Cloud computing',
+                'Agile development',
+              ]}
             />
           </Col>
         </Row>
