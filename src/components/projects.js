@@ -68,7 +68,7 @@ const StyledDivider = styled(Divider)`
   margin-bottom: 2em;
 `;
 
-const ReveredRow = styled(Row)`
+const RowReversed = styled(Row)`
   @media (max-width: ${({ mobileBreakpoint = '992px' }) => mobileBreakpoint}) {
     flex-direction: column-reverse;
   }
@@ -79,7 +79,7 @@ export default () => (
     <h2>Projects</h2>
     <h5>Projects & Open Source Contributions</h5>
     <Margin top="1.5em">
-      <ReveredRow cols={2} mobileBreakpoint="750px">
+      <RowReversed cols={2} mobileBreakpoint="750px">
         <Col>
           <h6>MicroProfile Starter VSCode Extension</h6>
           <p>
@@ -125,7 +125,7 @@ export default () => (
         <Col>
           <img src={MicroProfileImg} alt="Eclipse MicroProfile logo" />
         </Col>
-      </ReveredRow>
+      </RowReversed>
       <StyledDivider />
       <Row cols={2} mobileBreakpoint="750px">
         <Col>
@@ -160,7 +160,7 @@ export default () => (
         </Col>
       </Row>
       <StyledDivider />
-      <ReveredRow cols={2} mobileBreakpoint="750px">
+      <RowReversed cols={2} mobileBreakpoint="750px">
         <Col>
           <h6>Open Liberty dev mode</h6>
           <p>
@@ -201,7 +201,7 @@ export default () => (
         <Col>
           <img src={LibertyDevImg} alt="Voice Agent dashboard" />
         </Col>
-      </ReveredRow>
+      </RowReversed>
     </Margin>
   </StyledProjects>
 );

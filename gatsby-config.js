@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: 'https://ryanzegray.dev', // used-by- gatsby to generate robots.txt / sitemap.xml
     title: 'Ryan Zegray',
     description:
-      'Ryan Zegray Software Developer experienced with JavaScript, Python, Java, Node.js, React.js, HTML, CSS and SQL / NoSQL databases.',
+      'Ryan Zegray Software Developer from Toronto Canada',
     author: 'Ryan Zegray',
   },
   plugins: [
